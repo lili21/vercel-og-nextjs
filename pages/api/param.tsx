@@ -38,15 +38,16 @@ export default function handler(req: NextRequest) {
               alignContent: 'center',
               justifyContent: 'center',
               justifyItems: 'center',
+              borderRadius: '50%',
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt="Vercel"
-              height={200}
+              height={100}
               src="https://blog.lili21.me/_next/image?url=%2Favatar.jpeg&w=96&q=75"
               style={{ margin: '0 30px' }}
-              width={232}
+              width={100}
             />
           </div>
           <div
@@ -66,8 +67,8 @@ export default function handler(req: NextRequest) {
         </div>
       ),
       {
-        width: 1200,
-        height: 630,
+        width: 900,
+        height: 600,
       }
     )
   } catch (e: any) {
