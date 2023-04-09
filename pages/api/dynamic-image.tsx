@@ -1,18 +1,18 @@
-import { ImageResponse } from '@vercel/og'
-import { NextRequest } from 'next/server'
+import { ImageResponse } from "@vercel/og";
+import { NextRequest } from "next/server";
 
 export const config = {
-  runtime: 'experimental-edge',
-}
+  runtime: "experimental-edge",
+};
 
 export default async function handler(req: NextRequest) {
-  const { searchParams } = req.nextUrl
-  const username = searchParams.get('username')
+  const { searchParams } = req.nextUrl;
+  const username = searchParams.get("username");
   if (!username) {
     return new ImageResponse(<>{'Visit with "?username=vercel"'}</>, {
       width: 1200,
       height: 630,
-    })
+    });
   }
 
   return new ImageResponse(
@@ -20,22 +20,24 @@ export default async function handler(req: NextRequest) {
       <div
         style={{
           fontSize: 60,
-          color: 'black',
-          background: '#f6f6f6',
-          width: '100%',
-          height: '100%',
+          color: "black",
+          background: "#f6f6f6",
+          width: "100%",
+          height: "100%",
           paddingTop: 50,
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          display: 'flex',
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt="avatar"
           width="256"
-          src={`https://github.com/${username}.png`}
+          src={
+            "https://blog.lili21.me/_next/image?url=%2Favatar.jpeg&w=96&q=75"
+          }
           style={{
             borderRadius: 128,
           }}
@@ -47,5 +49,5 @@ export default async function handler(req: NextRequest) {
       width: 1200,
       height: 630,
     }
-  )
+  );
 }
