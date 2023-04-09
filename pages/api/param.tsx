@@ -45,7 +45,7 @@ export default function handler(req: NextRequest) {
             <img
               alt="Vercel"
               height={100}
-              src="https://blog.lili21.me/_next/image?url=%2Favatar.jpeg&w=96&q=75"
+              src="https://avatars.githubusercontent.com/u/4456380"
               style={{ margin: '0 30px' }}
               width={100}
             />
